@@ -9,10 +9,14 @@ const Contacts = ({ contacts, currentUser , ChangeChat}) => {
 
   
   useEffect(() => {
-    if (currentUser) {
-      setCurrentUserImage(currentUser.avatarImage);
-      setCurrentUserName(currentUser.username);
+    const setdata = async () => {
+
+      if (currentUser) {
+        setCurrentUserImage(currentUser.avatarImage);
+        setCurrentUserName(currentUser.username);
+      }
     }
+    setdata();
   }, [currentUser]);
   
 

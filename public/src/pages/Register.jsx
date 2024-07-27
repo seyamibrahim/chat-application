@@ -31,7 +31,7 @@ const Register = () => {
   useEffect(() => {
     const fetchData = async () =>{
       if(localStorage.getItem("chat-app-user")){
-        navigate("/register");
+        navigate("/");
       }
     }
     fetchData();

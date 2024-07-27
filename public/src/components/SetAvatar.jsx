@@ -26,7 +26,7 @@ const SetAvatar = () => {
   useEffect(() => {
     const fetchData = async () =>{
       if(!localStorage.getItem("chat-app-user")){
-        navigate("/");
+        navigate("/login");
       }
     }
     fetchData();

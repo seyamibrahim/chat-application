@@ -10,8 +10,8 @@ function ChatInput({ handleSendMsg }) {
   const handleEmojiPicker = () => {
     setShowEmojiPicker(!showEmojiPicker);
   };
-  const handleEmojiClick = (e,emojiobj) => {
-    console.log(emojiobj)
+  const handleEmojiClick = (emojiobj) => {
+    // console.log(emojiobj)
     let message = msg;
     message += emojiobj.emoji;
     setMsg(message) ;
@@ -25,7 +25,7 @@ function ChatInput({ handleSendMsg }) {
   }
   return (
     <div className="chatInput_container">
-      <div className="button-container">
+      <div className="button_container">
         <div className="emoji">
           <BsEmojiSmileFill onClick={handleEmojiPicker} />
           {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
